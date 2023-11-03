@@ -12,17 +12,16 @@ int main() {
     for (int k = 0; k < q; k++) {
         int x;
         cin >> x;
-        int l = 0, r = n - 1, m = 0;
-        while (l <= r) {
-            m = (r + l) / 2;
-            if (x < a[m]) r = m-1;
-            else if (x > a[m]) l = m + 1;
-            else {
-                ans[k] = m + 1;
-                break;
+        int low = 0, high = n-1, mid;
+        ans[k] = 0;
+        while (low <= high) {
+            mid = (low + high) / 2;
+            if (x < a[mid]) high = mid - 1;
+            if (x >= a[mid]) {
+                ans[k] = mid+1;
+                low = mid + 1;
             }
         }
-        if (l > r) ans[k] = 0;
     }
     for (int i = 0; i < q; i++) {
         if (i) cout << "\n";
