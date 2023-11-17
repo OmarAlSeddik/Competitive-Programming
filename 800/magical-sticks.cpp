@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        cout << fixed << setprecision(0);
+        cout << ceil((double) n / 2);
+        if (t) cout << "\n";
+    }
+    return 0;
+}
