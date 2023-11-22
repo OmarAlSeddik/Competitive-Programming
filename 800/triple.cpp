@@ -5,16 +5,18 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int n, evenSum = 0, oddSum = 0;
+        int n, ans = -1;
         cin >> n;
+        unordered_map<int, int> count;
         for (int i = 0; i < n; i++) {
             int x;
             cin >> x;
-            if (x % 2) oddSum += x;
-            else evenSum += x; 
+            count[x]++;
+            if (count[x] == 3) {
+                ans = x;
+            } 
         }
-        if (evenSum >= oddSum) cout << "YES";
-        else cout << "NO";
+        cout << ans;
         if (t) cout << "\n";
     }
     return 0;

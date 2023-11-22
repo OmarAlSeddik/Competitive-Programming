@@ -5,10 +5,10 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int s[4];
-        for (int i = 0; i < 4; i++) {
-            cin >> s[i];
-        }
+        int n;
+        cin >> n;
+        
+        if (t) cout << "\n";
     }
     return 0;
 }

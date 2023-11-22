@@ -13,7 +13,7 @@ int main() {
             if (x % 2) oddSum += x;
             else evenSum += x; 
         }
-        if (evenSum >= oddSum) cout << "YES";
+        if (evenSum > oddSum) cout << "YES";
         else cout << "NO";
         if (t) cout << "\n";
     }
