@@ -5,9 +5,9 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int x;
-        cin >> x;
-        cout << x-1 << " " << 1;
+        int h, m;
+        cin >> h >> m;
+        cout << (23 - h) * 60 + (60 - m);
         if (t) cout << "\n";
     }
     return 0;

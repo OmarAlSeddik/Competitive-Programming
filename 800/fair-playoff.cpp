@@ -5,10 +5,11 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int s[4];
-        for (int i = 0; i < 4; i++) {
-            cin >> s[i];
-        }
+        int s1, s2, s3, s4;
+        cin >> s1 >> s2 >> s3 >> s4;
+        if (min(s1, s2) > max(s3, s4) || min(s3, s4) > max(s1, s2)) cout << "NO";
+        else cout << "YES";
+        if (t) cout << "\n";
     }
     return 0;
 }

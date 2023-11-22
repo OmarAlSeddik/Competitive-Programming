@@ -5,9 +5,10 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int x;
-        cin >> x;
-        cout << x-1 << " " << 1;
+        int l, r;
+        cin >> l >> r;
+        if (l*2 <= r) cout << l << " " << l*2;
+        else cout << "-1 -1";
         if (t) cout << "\n";
     }
     return 0;

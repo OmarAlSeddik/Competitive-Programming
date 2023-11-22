@@ -4,15 +4,13 @@ using namespace std;
 int main() {
     int t;
     cin >> t;
-    int ans[t];
-    for (int i = 0; i < t; i++) {
+    while (t--) {
         int x, y, n;
         cin >> x >> y >> n;
-        ans[i] = floor((double) n / x) * x - (x -y);
-    }
-    for (int i = 0; i < t; i++) {
-        if (i) cout << "\n";
-        cout << ans[i];
+        if (n % x > y) cout << n - (n % x - y);
+        else if (n % x < y) cout << n - (x + n % x - y);
+        else cout << n;
+        if (t) cout << "\n";
     }
     return 0;
 }

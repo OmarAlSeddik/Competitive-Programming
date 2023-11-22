@@ -5,9 +5,10 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int x;
-        cin >> x;
-        cout << x-1 << " " << 1;
+        int n, m;
+        cin >> n >> m;
+        cout << fixed << setprecision(0);
+        cout << ceil((double) n * m / 2);
         if (t) cout << "\n";
     }
     return 0;
