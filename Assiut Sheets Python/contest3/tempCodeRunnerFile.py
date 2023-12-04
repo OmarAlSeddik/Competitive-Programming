@@ -1,0 +1,1 @@
+min(even_count, odd_count)
