@@ -14,19 +14,18 @@ int main() {
         int x;
         cin >> s >> x;
         if (s == "lower_bound") {
-            int ans = lower_bound(a, a + n, x) - a;
-            if (ans == n) cout << "-1\n";
-            else cout << ans + 1 << "\n";
+            auto it = lower_bound(a, a + n, x);
+            if (it == a + n) cout << "-1\n";
+            else cout << *it << "\n";
         }
         else if (s == "upper_bound") {
-            int ans = upper_bound(a, a + n, x) - a;
-            if (ans == n) cout << "-1\n";
-            else cout << ans + 1 << "\n";
+            auto it = upper_bound(a, a + n, x);
+            if (it == a + n) cout << "-1\n";
+            else cout << *it << "\n";
         }
         else if (s == "binary_search") {
-            int i = lower_bound(a, a + n, x) - a;
-            if (a[i] == x) cout << "found\n";
-            else cout << "not found\n";
+            if (binary_search(a, a + n, x)) cout << "found\n";
+            else cout << "not found\n"; 
         }
     }
     return 0;

@@ -6,18 +6,18 @@ int main() {
     cin.tie(0);
     int q;
     cin >> q;
-    unordered_set<int> mySet;
+    set<int> mySet;
     while (q--) {
         string s;
         int x;
         cin >> s >> x;
         if (s == "lower_bound") {
-            auto it = lower_bound(mySet.begin(), mySet.end(), x);
+            auto it = mySet.lower_bound(x);
             if (it != mySet.end()) cout << distance(mySet.begin(), it) + 1 << "\n";
             else cout << -1 << "\n";
         }
         else if (s == "upper_bound") {
-            auto it = upper_bound(mySet.begin(), mySet.end(), x);
+            auto it = mySet.upper_bound(x);
             if (it != mySet.end()) cout << distance(mySet.begin(), it) + 1 << "\n";
             else cout << -1 << "\n";
         }

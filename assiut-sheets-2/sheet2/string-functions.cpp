@@ -17,11 +17,13 @@ int main() {
         else if (x == "sort") {
             int l, r;
             cin >> l >> r;
+            if (l > r) swap(l, r);
             sort(s.begin()+l-1, s.begin()+r);
         }
         else if (x == "reverse") {
             int l, r;
             cin >> l >> r;
+            if (l > r) swap(l, r);
             reverse(s.begin()+l-1, s.begin()+r);
         }
         else if (x == "print") {
@@ -32,6 +34,7 @@ int main() {
         else if (x == "substr") {
             int l, r;
             cin >> l >> r;
+            if (l > r) swap(l, r);
             cout << s.substr(l-1, r-l+1) << "\n";
         }
         else if (x == "push_back") {
